@@ -1,0 +1,293 @@
+
+/* ===== HISTORY PAGE ===== */
+
+.history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+.history-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 25px;
+    color: white;
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("https://www.srilankanexpeditions.co.uk/images/main_slider/history-archaeology-sri-lanka/04.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-color: #294d3d;
+}
+
+.history-hero-content {
+    max-width: 800px;
+}
+
+.history-subtitle,
+.section-label {
+    color: #d5a44b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.history-hero h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    margin-bottom: 22px;
+}
+
+.history-hero p:last-child {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.history-intro {
+    text-align: center;
+}
+
+.history-intro h2,
+.kingdoms-section h2,
+.colonial-section h2,
+.independence-section h2,
+.timeline-section h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    color: #173e2c;
+    margin-bottom: 25px;
+}
+
+.history-intro > p:last-child {
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+/* ===== KINGDOM CARDS ===== */
+
+.kingdoms-section {
+    background: #f4f8f5;
+}
+
+.kingdoms-section .history-container {
+    text-align: center;
+}
+
+.kingdom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.kingdom-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+}
+
+.kingdom-card:hover {
+    transform: translateY(-7px);
+}
+
+.kingdom-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: #dce8df;
+}
+
+.anuradhapura {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwyUC4AYWvh_YtNvKPG20H5L8FO8kHncW9SNauxlGkgLG1K4jow4RIYbqI&s=10");
+}
+
+.polonnaruwa {
+    background-image: url("https://assets.tikalanka.com/uploads/general/_fancybox/Polonnaruwa_01.jpg");
+}
+
+.kandy {
+    background-image: url("https://www.kandyperaherabookings.com/images/blog/01/03.jpg");
+}
+
+.kingdom-content {
+    padding: 26px;
+}
+
+.kingdom-content span,
+.colonial-card span {
+    color: #b18432;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.kingdom-content h3 {
+    margin: 12px 0;
+    color: #173e2c;
+    font-size: 22px;
+}
+
+.kingdom-content p,
+.colonial-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ===== COLONIAL ERA ===== */
+
+.colonial-section {
+    text-align: center;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+.colonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.colonial-card {
+    padding: 35px 28px;
+    border: 1px solid #e2e9e3;
+    border-radius: 12px;
+    text-align: left;
+    background: #fff;
+}
+
+.colonial-card h3 {
+    color: #173e2c;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.colonial-card p {
+    margin-top: 18px;
+}
+
+/* ===== INDEPENDENCE ===== */
+
+.independence-section {
+    background: #173e2c;
+    color: white;
+}
+
+.independence-content {
+    text-align: center;
+    max-width: 900px;
+}
+
+.independence-section h2 {
+    color: white;
+}
+
+.independence-section p:last-child {
+    line-height: 1.9;
+    color: #e4eee7;
+}
+
+/* ===== TIMELINE ===== */
+
+.timeline-section {
+    text-align: center;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 45px auto 0;
+    text-align: left;
+    border-left: 3px solid #188151;
+    padding-left: 35px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #188151;
+    border: 3px solid white;
+}
+
+.timeline-item span {
+    font-weight: bold;
+    color: #b18432;
+}
+
+.timeline-item h3 {
+    margin: 10px 0;
+    color: #173e2c;
+}
+
+.timeline-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ===== FOOTER ===== */
+
+.history-footer {
+    padding: 28px;
+    text-align: center;
+    background: #102d21;
+    color: #e0e8e2;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+    .kingdom-grid,
+    .colonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .history-container {
+        padding: 65px 20px;
+    }
+
+    .history-hero {
+        min-height: 380px;
+    }
+
+    .kingdom-grid,
+    .colonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-item::before {
+        left: -35px;
+    }
+}
