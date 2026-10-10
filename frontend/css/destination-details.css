@@ -1,0 +1,288 @@
+
+/* ==============================
+   DESTINATION DETAILS PAGE
+================================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9f7;
+    color: #26382d;
+}
+
+/* Navbar */
+
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.details-navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-logo {
+    color: #176b46;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.details-nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.details-nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.details-nav-links a:hover {
+    color: #168451;
+}
+
+/* Hero Section */
+
+.details-hero {
+    min-height: 420px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ), url("../assets/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.details-hero-content {
+    max-width: 800px;
+}
+
+.details-hero-content span {
+    color: #b9e5c9;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.details-hero h1 {
+    color: white;
+    font-size: clamp(38px, 5vw, 60px);
+    margin: 18px 0;
+}
+
+.details-hero p {
+    color: #f2f2f2;
+    font-size: 19px;
+}
+
+/* Main Container */
+
+.details-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 45px;
+    color: #168451;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Introduction */
+
+.details-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 90px;
+}
+
+.section-label {
+    color: #168451;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.details-description h2 {
+    font-size: 36px;
+    margin: 18px 0;
+}
+
+.details-description p {
+    color: #59665e;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.details-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlights */
+
+.details-highlights {
+    margin-bottom: 90px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-top: 14px;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.highlight-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #168451;
+}
+
+.highlight-card h3 {
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.highlight-card p {
+    color: #66736b;
+    line-height: 1.7;
+}
+
+/* Travel Information */
+
+.travel-info {
+    background: #eaf3ed;
+    padding: 45px 35px;
+    border-radius: 20px;
+}
+
+.travel-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.travel-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.info-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.info-card h3 {
+    color: #176b46;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #59665e;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+.details-footer {
+    background: #163b2c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .details-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .highlights-grid,
+    .travel-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .details-navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .details-nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .details-hero {
+        min-height: 300px;
+    }
+
+    .details-container {
+        padding: 40px 18px;
+    }
+
+    .details-description h2,
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .details-image img {
+        height: 260px;
+    }
+
+    .highlights-grid,
+    .travel-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-info {
+        padding: 30px 18px;
+    }
+}
+
