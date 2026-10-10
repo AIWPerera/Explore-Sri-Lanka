@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Explore Sri Lanka</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/destinations.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <nav class="destination-navbar">
+            <a href="../index.html" class="destination-logo">
+                Explore Sri Lanka
+            </a>
+
+            <div class="destination-nav-links">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="destinations.html" class="active">Destinations</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="destinations-hero">
+        <div class="destinations-hero-content">
+            <h1>Discover Sri Lanka</h1>
+            <p>
+                Explore breathtaking landscapes, ancient wonders,
+                and unforgettable destinations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <main class="destinations-section">
+
+        <div class="section-heading">
+            <span>EXPLORE THE ISLAND</span>
+            <h2>Popular Destinations</h2>
+            <p>
+                Find your next adventure in the Pearl of the Indian Ocean.
+            </p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="destination-controls">
+            <input
+                type="search"
+                id="destinationSearch"
+                placeholder="Search destinations..."
+                aria-label="Search destinations"
+            >
+
+            <div class="destination-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="heritage">Heritage</button>
+                <button class="filter-btn" data-filter="beach">Beaches</button>
+            </div>
+        </div>
+
+        <!-- Destination Cards -->
+        <div class="destination-grid" id="destinationGrid">
+
+            <article class="destination-card" data-category="heritage">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak3SGTJ-QHvnAZxIzgpxM38rJ9kq1AeqWWb2b4A1HPj_b3HsKVldBhXKo&s=10" alt="Sigiriya Rock Fortress">
+                <div class="destination-card-content">
+                    <span>HERITAGE</span>
+                    <h3>Sigiriya</h3>
+                    <p>Discover the magnificent ancient rock fortress.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+            <article class="destination-card" data-category="nature">
+                <img src="https://images.squarespace-cdn.com/content/v1/5a3bb03b4c326d76de73ddaa/9732566d-6b33-4a1a-ba0c-1b73ed8848a4/The+Common+Wanderer-9888.jpg" alt="Ella Sri Lanka">
+                <div class="destination-card-content">
+                    <span>NATURE</span>
+                    <h3>Ella</h3>
+                    <p>Experience beautiful mountains and lush green landscapes.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+            <article class="destination-card" data-category="heritage">
+                <img src="https://d2r2v0jxjsbm0p.cloudfront.net/2019/03/Galle-fort-02-1.jpg" alt="Galle Fort">
+                <div class="destination-card-content">
+                    <span>HERITAGE</span>
+                    <h3>Galle Fort</h3>
+                    <p>Explore colonial architecture and coastal history.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+            <article class="destination-card" data-category="nature">
+                <img src="https://cdn.audleytravel.com/3601/2573/79/15979547-female-worker-at-tea-plantation-nuwara-eliya.jpg" alt="Nuwara Eliya">
+                <div class="destination-card-content">
+                    <span>NATURE</span>
+                    <h3>Nuwara Eliya</h3>
+                    <p>Enjoy misty hills, tea estates and cool mountain air.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+            <article class="destination-card" data-category="beach">
+                <img src="https://thirdeyetraveller.com/wp-content/uploads/COCONUTHILL-7-of-12-2-scaled-scaled.jpg" alt="Mirissa Beach">
+                <div class="destination-card-content">
+                    <span>BEACH</span>
+                    <h3>Mirissa</h3>
+                    <p>Relax on golden sandy beaches beside the Indian Ocean.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+            <article class="destination-card" data-category="heritage">
+                <img src="https://cdn.tatlerasia.com/tatlerasia/i/2025/01/22093254-yashowdays-1707021173-3295054881364627685-63061201054_cover_1280x1600.jpg" alt="Kandy">
+                <div class="destination-card-content">
+                    <span>HERITAGE</span>
+                    <h3>Kandy</h3>
+                    <p>Discover the cultural beauty of Sri Lanka's hill capital.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="noResults" class="no-results" hidden>
+            No destinations found.
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="destinations-footer">
+        <p>&copy; 2026 Explore Sri Lanka. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/destinations.js"></script>
+</body>
+</html>
