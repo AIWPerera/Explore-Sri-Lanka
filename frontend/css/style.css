@@ -134,3 +134,124 @@ body {
         font-size: 30px;
     }
 }
+
+
+/* =========================
+   HOME HERO SECTION
+========================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image: url("../assets/images/hero.jpg?v=2");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 30, 22, 0.88),
+        rgba(0, 30, 22, 0.30)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    padding: 70px 8%;
+}
+
+.hero-subtitle {
+    color: #f4c95d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 80px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f4c95d;
+    display: block;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 35px;
+    color: #f1f1f1;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #f4c95d;
+    color: #12372d;
+}
+
+.btn-primary:hover {
+    background-color: #ffdb80;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #12372d;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive Hero */
+@media (max-width: 768px) {
+    .hero {
+        min-height: calc(100vh - 80px);
+    }
+
+    .hero-content {
+        padding: 60px 6%;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
