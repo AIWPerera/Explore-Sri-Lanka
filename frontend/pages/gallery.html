@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Explore Sri Lanka</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                🇱🇰 Explore <span>Sri Lanka</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="gallery-hero">
+            <div class="gallery-hero-content">
+                <p class="gallery-eyebrow">CAPTURE THE BEAUTY</p>
+                <h1>Sri Lanka Photo Gallery</h1>
+                <p>
+                    Discover breathtaking landscapes, golden beaches,
+                    wildlife, culture and unforgettable island moments.
+                </p>
+                <a href="#gallery-section" class="gallery-hero-btn">
+                    Explore Gallery
+                </a>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="gallery-intro">
+            <p class="gallery-section-label">THE PEARL OF THE INDIAN OCEAN</p>
+            <h2>Explore Sri Lanka Through Pictures</h2>
+            <p>
+                From tropical beaches to misty mountains and ancient
+                wonders, every corner of Sri Lanka tells a story.
+            </p>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="gallery-section" id="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-heading">
+                    <p class="gallery-section-label">OUR COLLECTION</p>
+                    <h2>Moments From Paradise</h2>
+                    <p>Find the places and experiences that inspire you.</p>
+                </div>
+
+                <div class="gallery-search-wrap">
+                    <input
+                        type="search"
+                        id="gallerySearch"
+                        placeholder="Search photos... e.g. Ella, Sigiriya, Beach"
+                        aria-label="Search gallery photos"
+                    >
+                </div>
+
+                <div class="gallery-filters" id="galleryFilters">
+                    <button class="gallery-filter active" data-category="all">All Photos</button>
+                    <button class="gallery-filter" data-category="beaches">Beaches</button>
+                    <button class="gallery-filter" data-category="mountains">Mountains</button>
+                    <button class="gallery-filter" data-category="waterfalls">Waterfalls</button>
+                    <button class="gallery-filter" data-category="wildlife">Wildlife</button>
+                    <button class="gallery-filter" data-category="heritage">Heritage</button>
+                    <button class="gallery-filter" data-category="culture">Culture</button>
+                </div>
+
+                <p class="gallery-count" id="galleryCount" aria-live="polite"></p>
+
+                <div class="gallery-grid" id="galleryGrid"></div>
+
+                <p class="gallery-empty" id="galleryEmpty" hidden>
+                    No photos found. Try another search.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div class="gallery-lightbox" id="galleryLightbox"
+         role="dialog" aria-modal="true"
+         aria-label="Photo preview" hidden>
+
+        <button class="lightbox-close" id="lightboxClose"
+                aria-label="Close photo preview">&times;</button>
+
+        <button class="lightbox-prev" id="lightboxPrev"
+                aria-label="Previous photo">&#10094;</button>
+
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <h3 id="lightboxTitle"></h3>
+            <p id="lightboxLocation"></p>
+        </div>
+
+        <button class="lightbox-next" id="lightboxNext"
+                aria-label="Next photo">&#10095;</button>
+    </div>
+
+    <footer class="gallery-footer">
+        <p>&copy; 2026 Explore Sri Lanka. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
