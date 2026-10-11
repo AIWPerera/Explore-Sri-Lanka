@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lankan Food | Explore Sri Lanka</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/food.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">
+                🇱🇰 Explore <span>Sri Lanka</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="food.html" class="active">Food</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                &#9776;
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="food-hero">
+            <div class="food-hero-content">
+                <p class="food-eyebrow">FLAVOURS OF THE ISLAND</p>
+                <h1>Discover Sri Lankan Cuisine</h1>
+                <p>
+                    Explore traditional meals, delicious street food,
+                    fresh seafood, sweet treats and refreshing drinks.
+                </p>
+                <a href="#food-explorer" class="food-hero-btn">
+                    Explore Our Food
+                </a>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="food-intro">
+            <p class="food-section-label">A TASTE OF SRI LANKA</p>
+            <h2>Experience the Flavours of Paradise</h2>
+            <p>
+                Sri Lankan cuisine brings together aromatic spices,
+                coconut, fresh ingredients and centuries of culinary
+                traditions. Discover dishes enjoyed by communities
+                throughout the island.
+            </p>
+        </section>
+
+        <!-- FOOD EXPLORER -->
+        <section class="food-explorer" id="food-explorer">
+            <div class="food-container">
+                <div class="food-heading">
+                    <p class="food-section-label">EXPLORE OUR CUISINE</p>
+                    <h2>Traditional Foods & Local Favourites</h2>
+                    <p>Find your next favourite Sri Lankan dish.</p>
+                </div>
+
+                <div class="food-search-wrap">
+                    <label for="foodSearch" class="visually-hidden">
+                        Search food
+                    </label>
+                    <input
+                        type="search"
+                        id="foodSearch"
+                        placeholder="Search food... e.g. Kottu, Hoppers, Curry"
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="food-filters" id="foodFilters"
+                     aria-label="Food categories">
+                    <button class="filter-btn active"
+                            data-category="all">All Foods</button>
+                    <button class="filter-btn"
+                            data-category="rice">Rice & Curry</button>
+                    <button class="filter-btn"
+                            data-category="street">Street Food</button>
+                    <button class="filter-btn"
+                            data-category="breakfast">Breakfast</button>
+                    <button class="filter-btn"
+                            data-category="seafood">Seafood</button>
+                    <button class="filter-btn"
+                            data-category="sweets">Sweets</button>
+                    <button class="filter-btn"
+                            data-category="drinks">Drinks & Snacks</button>
+                </div>
+
+                <p id="foodCount" class="food-count"
+                   aria-live="polite"></p>
+
+                <div class="food-grid" id="foodGrid"></div>
+
+                <p id="foodEmpty" class="food-empty" hidden>
+                    No food found. Try another search or category.
+                </p>
+            </div>
+        </section>
+
+        <!-- END BANNER -->
+        <section class="food-banner">
+            <p>AUTHENTIC • FLAVOURFUL • UNFORGETTABLE</p>
+            <h2>A Delicious Journey Through Sri Lanka</h2>
+            <a href="destinations.html" class="food-hero-btn">
+                Explore Destinations
+            </a>
+        </section>
+    </main>
+
+    <footer class="food-footer">
+        <p>&copy; 2026 Explore Sri Lanka. Taste Our Traditions.</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/food.js"></script>
+</body>
+</html>
