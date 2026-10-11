@@ -1,0 +1,299 @@
+
+/* ===== CULTURE PAGE ===== */
+
+.culture-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+/* ===== HERO ===== */
+
+.culture-hero {
+    min-height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 25px;
+    text-align: center;
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.50),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("https://royalleisuretours.com/wp-content/uploads/2015/04/Sri-Lankan-culture-and-tradition-768x522.jpg")
+        center / cover no-repeat;
+
+    background-color: #193b2e;
+}
+
+.culture-hero-content {
+    max-width: 850px;
+}
+
+.culture-subtitle,
+.culture-label {
+    color: #d8a443;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 17px;
+}
+
+.culture-hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.culture-hero-content > p:not(.culture-subtitle) {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.culture-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #d8a443;
+    color: #173528;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.culture-btn:hover {
+    background: #f1bd5b;
+    transform: translateY(-3px);
+}
+
+/* ===== INTRODUCTION ===== */
+
+.culture-intro {
+    text-align: center;
+}
+
+.culture-intro h2,
+.culture-section-heading h2,
+.culture-diversity h2,
+.culture-banner h2 {
+    color: #173e2c;
+    font-size: clamp(28px, 4vw, 39px);
+    margin-bottom: 24px;
+}
+
+.culture-intro > p:last-child {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #626262;
+    line-height: 1.9;
+}
+
+/* ===== TRADITION CARDS ===== */
+
+.traditions-section {
+    background: #f5f8f5;
+}
+
+.culture-section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.culture-section-heading > p:last-child {
+    color: #666666;
+    line-height: 1.8;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.culture-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+}
+
+.culture-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.culture-card-content {
+    padding: 28px;
+}
+
+.culture-card-content span {
+    color: #b18432;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.culture-card-content h3 {
+    margin: 12px 0;
+    color: #173e2c;
+    font-size: 24px;
+}
+
+.culture-card-content p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* ===== CULTURAL DIVERSITY ===== */
+
+.culture-diversity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.diversity-content p:not(.culture-label) {
+    color: #666666;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.diversity-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* ===== FESTIVALS ===== */
+
+.festival-section {
+    background: #f5f8f5;
+}
+
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.festival-card {
+    background: #ffffff;
+    padding: 35px 28px;
+    border-radius: 12px;
+    border: 1px solid #e2e9e3;
+    transition: transform 0.3s;
+}
+
+.festival-card:hover {
+    transform: translateY(-5px);
+}
+
+.festival-number {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #d8a443;
+    margin-bottom: 18px;
+}
+
+.festival-card h3 {
+    color: #173e2c;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.festival-card p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ===== FINAL BANNER ===== */
+
+.culture-banner {
+    padding: 95px 25px;
+    text-align: center;
+    color: white;
+    background: #173e2c;
+}
+
+.culture-banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.culture-banner-content > p {
+    color: #d8a443;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.culture-banner h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* ===== FOOTER ===== */
+
+.culture-footer {
+    background: #102d21;
+    color: #e4ebe6;
+    text-align: center;
+    padding: 27px 20px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+    .culture-diversity {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .festival-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .culture-container {
+        padding: 65px 20px;
+    }
+
+    .culture-hero {
+        min-height: 430px;
+        padding: 70px 20px;
+    }
+
+    .culture-grid,
+    .festival-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-card img {
+        height: 230px;
+    }
+
+    .diversity-image img {
+        height: 280px;
+    }
+}
