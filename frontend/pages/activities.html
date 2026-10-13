@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover exciting activities and things to do in Sri Lanka.">
+
+    <title>Activities & Things to Do | Explore Sri Lanka</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/activities.css">
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/activities.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <!-- HERO -->
+    <section class="activities-hero">
+        <div class="activities-hero-content">
+            <span>EXPLORE • EXPERIENCE • DISCOVER</span>
+
+            <h1>Activities & Things to Do</h1>
+
+            <p>
+                From wildlife safaris and surfing to hiking,
+                scenic train journeys and cultural experiences,
+                discover unforgettable adventures in Sri Lanka.
+            </p>
+
+            <a href="#activityDirectory">Explore Activities ↓</a>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="activities-intro">
+        <span>YOUR ADVENTURE STARTS HERE</span>
+        <h2>Experience the Best of Sri Lanka</h2>
+        <p>
+            Whether you love adventure, nature, wildlife,
+            culture or relaxation, Sri Lanka has something
+            special for every traveller.
+        </p>
+    </section>
+
+    <!-- DIRECTORY -->
+    <main class="activities-main" id="activityDirectory">
+
+        <div class="activities-heading">
+            <span>DISCOVER EXPERIENCES</span>
+            <h2>Find Your Next Adventure</h2>
+            <p>Search activities by name, category or district.</p>
+        </div>
+
+        <div class="activity-filters">
+
+            <div>
+                <label for="activitySearch">Search Activity</label>
+                <input
+                    type="search"
+                    id="activitySearch"
+                    placeholder="Try Surfing, Safari, Hiking...">
+            </div>
+
+            <div>
+                <label for="activityCategory">Category</label>
+                <select id="activityCategory">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="activityDistrict">District</label>
+                <select id="activityDistrict">
+                    <option value="all">All Districts</option>
+                </select>
+            </div>
+
+            <button type="button" id="activityReset">
+                Reset Filters
+            </button>
+
+        </div>
+
+        <p id="activityCount" class="activity-count" aria-live="polite"></p>
+
+        <div id="activityGrid" class="activity-grid"></div>
+
+        <p id="activityEmpty" class="activity-empty" hidden>
+            No matching activities found. Try another search.
+        </p>
+
+        <!-- TRAVEL GUIDE -->
+        <section class="activity-guide">
+            <span>PLAN YOUR JOURNEY</span>
+            <h2>Ready to Explore Sri Lanka?</h2>
+            <p>
+                Discover more destinations and plan your
+                next unforgettable adventure.
+            </p>
+            <a href="destinations.html">Explore Destinations →</a>
+        </section>
+
+    </main>
+
+    <footer class="activities-footer">
+        <p>© 2026 Explore Sri Lanka | Tourism & Travel Guide</p>
+    </footer>
+
+</body>
+</html>

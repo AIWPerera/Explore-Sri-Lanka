@@ -1,0 +1,289 @@
+
+/* ==========================================
+   EXPLORE SRI LANKA - ACTIVITIES PAGE
+========================================== */
+
+.activities-hero {
+    min-height: 430px;
+    padding: 75px 20px;
+    background:
+        linear-gradient(
+            rgba(8, 42, 31, 0.78),
+            rgba(8, 42, 31, 0.72)
+        ),
+        url("../assets/images/hero.jpg") center/cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.activities-hero-content {
+    max-width: 850px;
+}
+
+.activities-hero-content > span,
+.activities-intro > span,
+.activities-heading > span,
+.activity-guide > span {
+    display: inline-block;
+    color: #f4c95d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.activities-hero h1 {
+    color: white;
+    font-size: clamp(36px, 5vw, 62px);
+    margin-bottom: 20px;
+}
+
+.activities-hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.activities-hero a,
+.activity-guide a {
+    display: inline-block;
+    background: #f4c95d;
+    color: #12372d;
+    padding: 15px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.activities-intro {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 75px 25px 20px;
+}
+
+.activities-intro > span,
+.activities-heading > span {
+    color: #13765b;
+}
+
+.activities-intro h2,
+.activities-heading h2 {
+    color: #12372d;
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.activities-intro p,
+.activities-heading p {
+    color: #64756a;
+    line-height: 1.8;
+}
+
+.activities-main {
+    max-width: 1300px;
+    margin: auto;
+    padding: 55px 25px 80px;
+}
+
+.activities-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.activity-filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+    background: #f3f8f4;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 28px;
+}
+
+.activity-filters label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #12372d;
+    margin-bottom: 10px;
+}
+
+.activity-filters input,
+.activity-filters select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d7e4da;
+    border-radius: 8px;
+    background: white;
+    font: inherit;
+}
+
+#activityReset {
+    padding: 15px 20px;
+    background: #12372d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#activityReset:hover {
+    background: #176b52;
+}
+
+.activity-count {
+    color: #52685b;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.activity-card {
+    background: white;
+    border: 1px solid #e1e9e3;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+}
+
+.activity-photo {
+    height: 225px;
+    padding: 20px;
+    background: linear-gradient(135deg, #195b47, #80ad98);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.activity-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 24px;
+}
+
+.activity-badge {
+    display: inline-block;
+    padding: 7px 13px;
+    background: #e6f4ea;
+    color: #126148;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.activity-content h3 {
+    color: #12372d;
+    margin: 16px 0 10px;
+    font-size: 21px;
+}
+
+.activity-content p {
+    color: #64756a;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.activity-content .activity-location {
+    color: #13765b;
+    font-weight: 700;
+}
+
+.activity-map {
+    display: inline-block;
+    margin-top: 8px;
+    color: #13765b;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.activity-map:hover {
+    text-decoration: underline;
+}
+
+.activity-empty {
+    text-align: center;
+    padding: 40px;
+    color: #64756a;
+}
+
+.activity-empty[hidden] {
+    display: none;
+}
+
+.activity-guide {
+    margin-top: 70px;
+    padding: 60px 25px;
+    background: #12372d;
+    color: white;
+    border-radius: 17px;
+    text-align: center;
+}
+
+.activity-guide h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.activity-guide p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.activities-footer {
+    padding: 28px 20px;
+    background: #0a241b;
+    color: #d5e4d9;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .activity-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .activity-filters,
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-main {
+        padding: 45px 18px 60px;
+    }
+
+    .activities-intro {
+        padding: 55px 18px 10px;
+    }
+}
