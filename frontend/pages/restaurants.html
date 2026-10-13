@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants & Dining | Explore Sri Lanka</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/restaurants.css">
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/restaurants.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header"></header>
+
+    <section class="restaurants-hero">
+        <div>
+            <span>TASTE THE ISLAND</span>
+            <h1>Restaurants & Dining</h1>
+            <p>
+                Discover authentic Sri Lankan flavours,
+                seafood restaurants, cafés and unforgettable
+                dining experiences across the island.
+            </p>
+            <a href="#restaurantsDirectory">Find Restaurants ↓</a>
+        </div>
+    </section>
+
+    <main id="restaurantsDirectory" class="restaurants-main">
+
+        <div class="restaurants-heading">
+            <span>DISCOVER LOCAL FLAVOURS</span>
+            <h2>Where to Eat in Sri Lanka</h2>
+            <p>
+                Find dining places by restaurant name,
+                district and cuisine type.
+            </p>
+        </div>
+
+        <div class="restaurant-filters">
+            <div>
+                <label for="restaurantSearch">Search Restaurants</label>
+                <input type="search" id="restaurantSearch"
+                       placeholder="Search restaurant or location...">
+            </div>
+
+            <div>
+                <label for="restaurantDistrict">District</label>
+                <select id="restaurantDistrict">
+                    <option value="all">All Districts</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="restaurantCuisine">Cuisine</label>
+                <select id="restaurantCuisine">
+                    <option value="all">All Cuisines</option>
+                </select>
+            </div>
+
+            <button type="button" id="restaurantReset">
+                Reset Filters
+            </button>
+        </div>
+
+        <p id="restaurantCount"
+           class="restaurant-count"
+           aria-live="polite"></p>
+
+        <div id="restaurantGrid" class="restaurant-grid"></div>
+
+        <p id="restaurantEmpty" class="restaurant-empty" hidden>
+            No matching restaurants found.
+            Try a different search.
+        </p>
+
+        <div class="restaurant-food-link">
+            <h2>Curious About Sri Lankan Food?</h2>
+            <p>
+                Discover traditional dishes, spices,
+                sweets and local favourites.
+            </p>
+            <a href="food.html">Explore Sri Lankan Food →</a>
+        </div>
+
+        <p class="restaurant-note">
+            Restaurant details may change. Confirm opening hours,
+            menus and availability directly before visiting.
+        </p>
+
+    </main>
+
+    <footer class="restaurants-footer">
+        <p>© 2026 Explore Sri Lanka | Tourism & Travel Guide</p>
+    </footer>
+
+</body>
+</html>

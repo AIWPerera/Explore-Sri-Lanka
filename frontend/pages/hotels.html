@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels & Stays | Explore Sri Lanka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hotels.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/hotels.js" defer></script>
+</head>
+<body>
+
+    <header class="header"></header>
+
+    <section class="hotels-hero">
+        <div>
+            <span>STAY SOMEWHERE SPECIAL</span>
+            <h1>Hotels & Accommodation</h1>
+            <p>Find beautiful places to stay during your Sri Lankan adventure.</p>
+            <a href="#hotelDirectory">Explore Stays ↓</a>
+        </div>
+    </section>
+
+    <main id="hotelDirectory" class="hotels-main">
+
+        <div class="hotels-heading">
+            <span>FIND YOUR PERFECT STAY</span>
+            <h2>Discover Places to Stay</h2>
+            <p>Explore hotels, resorts and unique accommodation across Sri Lanka.</p>
+        </div>
+
+        <div class="hotel-filters">
+            <div>
+                <label for="hotelSearch">Search Hotels</label>
+                <input type="search" id="hotelSearch"
+                       placeholder="Search hotel or location...">
+            </div>
+
+            <div>
+                <label for="hotelDistrict">District</label>
+                <select id="hotelDistrict">
+                    <option value="all">All Districts</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="hotelType">Accommodation Type</label>
+                <select id="hotelType">
+                    <option value="all">All Types</option>
+                </select>
+            </div>
+
+            <button id="hotelReset" type="button">Reset Filters</button>
+        </div>
+
+        <p id="hotelCount" class="hotel-count" aria-live="polite"></p>
+
+        <div id="hotelGrid" class="hotel-grid"></div>
+
+        <p id="hotelEmpty" class="hotel-empty" hidden>
+            No matching hotels found. Try another search.
+        </p>
+
+        <p class="hotel-disclaimer">
+            Hotel information is provided for travel inspiration.
+            Check the hotel's official website for current prices,
+            facilities and availability before booking.
+        </p>
+    </main>
+
+    <footer class="hotels-footer">
+        <p>© 2026 Explore Sri Lanka | Tourism & Travel Guide</p>
+    </footer>
+
+</body>
+</html>

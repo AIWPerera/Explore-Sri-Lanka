@@ -1,0 +1,576 @@
+
+/* ===================================
+   EXPLORE SRI LANKA - TOURISM HOME
+=================================== */
+
+:root {
+    --home-green: #12372d;
+    --home-green-light: #176b52;
+    --home-gold: #f4c95d;
+    --home-bg: #f7faf7;
+    --home-text: #24372f;
+    --home-muted: #66766e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--home-text);
+    background: var(--home-bg);
+}
+
+.home-hero {
+    min-height: 90vh;
+    background-position: center;
+}
+
+.home-hero .hero-content {
+    max-width: 900px;
+}
+
+.home-hero .hero-description {
+    max-width: 650px;
+}
+
+/* COMMON SECTIONS */
+
+.home-section {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 90px 28px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--home-green-light);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-intro h2,
+.section-heading-home h2,
+.home-search-box h2 {
+    color: var(--home-green);
+    font-size: clamp(28px, 3.5vw, 43px);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.section-intro p,
+.section-heading-home p {
+    color: var(--home-muted);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* SEARCH */
+
+.home-search-section {
+    max-width: 1120px;
+    margin: -45px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.home-search-box {
+    background: #ffffff;
+    padding: 34px;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.home-search-box h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.home-search-box p {
+    color: var(--home-muted);
+    line-height: 1.6;
+}
+
+.home-search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.home-search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #d8e3dc;
+    border-radius: 8px;
+    font: inherit;
+    outline-color: var(--home-green-light);
+}
+
+.home-search-form button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--home-green);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.home-search-form button:hover {
+    background: var(--home-green-light);
+}
+
+.search-feedback {
+    grid-column: 1 / -1;
+    font-size: 14px;
+}
+
+.search-feedback:empty {
+    display: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* HIGHLIGHTS */
+
+.experience-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.experience-highlights > div {
+    text-align: center;
+    padding: 28px 18px;
+    background: white;
+    border: 1px solid #e4ebe5;
+    border-radius: 14px;
+}
+
+.experience-highlights span {
+    display: block;
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+.experience-highlights h3 {
+    color: var(--home-green);
+    margin-bottom: 10px;
+}
+
+.experience-highlights p {
+    color: var(--home-muted);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* DESTINATIONS */
+
+.section-heading-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.section-heading-home > div {
+    max-width: 650px;
+}
+
+.text-link,
+.destination-info a,
+.itinerary-body a,
+.guide-card a {
+    color: var(--home-green-light);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.destination-info a:hover,
+.itinerary-body a:hover,
+.guide-card a:hover {
+    text-decoration: underline;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.destination-image {
+    height: 245px;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-tag {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: var(--home-gold);
+    color: var(--home-green);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.destination-info {
+    padding: 25px;
+}
+
+.destination-info h3 {
+    color: var(--home-green);
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.destination-info p {
+    color: var(--home-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* EXPERIENCES */
+
+.experiences-section {
+    padding-top: 70px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 28px 24px;
+    border: 1px solid #e2ebe5;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--home-text);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--home-green-light);
+}
+
+.experience-icon {
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+
+.experience-card h3 {
+    color: var(--home-green);
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.experience-card p {
+    color: var(--home-muted);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.experience-card > span:last-child {
+    color: var(--home-green-light);
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* ITINERARIES */
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.itinerary-card {
+    background: white;
+    border: 1px solid #e0e9e2;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.itinerary-top {
+    background: var(--home-green);
+    padding: 28px;
+    color: white;
+}
+
+.itinerary-top span {
+    display: inline-block;
+    background: var(--home-gold);
+    color: var(--home-green);
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.itinerary-top h3 {
+    font-size: 25px;
+}
+
+.itinerary-body {
+    padding: 28px;
+}
+
+.itinerary-body p {
+    color: var(--home-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.itinerary-body ol {
+    padding-left: 22px;
+    margin-bottom: 24px;
+}
+
+.itinerary-body li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.itinerary-note {
+    color: var(--home-muted);
+    text-align: center;
+    font-size: 13px;
+    margin-top: 24px;
+    line-height: 1.7;
+}
+
+/* TRAVEL GUIDE */
+
+.travel-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.guide-card {
+    padding: 28px 22px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #e0e9e2;
+}
+
+.guide-card > span {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.guide-card h3 {
+    color: var(--home-green);
+    margin-bottom: 12px;
+}
+
+.guide-card p {
+    color: var(--home-muted);
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+/* CTA */
+
+.home-cta {
+    background: linear-gradient(135deg, #12372d, #176b52);
+    padding: 90px 25px;
+    text-align: center;
+    color: white;
+}
+
+.home-cta > div {
+    max-width: 750px;
+    margin: auto;
+}
+
+.home-cta .eyebrow {
+    color: var(--home-gold);
+}
+
+.home-cta h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    margin-bottom: 18px;
+}
+
+.home-cta p {
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: #e1eee5;
+}
+
+/* FOOTER */
+
+.home-footer {
+    background: #0b271f;
+    color: white;
+    padding: 65px 25px 0;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-inner h3,
+.footer-inner h4 {
+    margin-bottom: 18px;
+}
+
+.footer-inner h3 {
+    color: var(--home-gold);
+}
+
+.footer-inner p {
+    color: #c6d5cd;
+    line-height: 1.8;
+    max-width: 360px;
+}
+
+.footer-inner a {
+    display: block;
+    color: #dbe8e0;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-inner a:hover {
+    color: var(--home-gold);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #b5c6bb;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .experience-highlights,
+    .experience-grid,
+    .travel-guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-search-box {
+        grid-template-columns: 1fr;
+        padding: 24px;
+    }
+
+    .destination-grid,
+    .itinerary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading-home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home-section {
+        padding: 65px 20px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-search-form {
+        flex-direction: column;
+    }
+
+    .experience-highlights,
+    .experience-grid,
+    .travel-guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-search-section {
+        margin-top: -20px;
+    }
+
+    .destination-image {
+        height: 220px;
+    }
+}
+
+/* Highlight a destination found by search */
+
+.search-highlight {
+    outline: 4px solid #f4c95d;
+    outline-offset: 5px;
+}

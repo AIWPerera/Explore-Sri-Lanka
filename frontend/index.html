@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Explore Sri Lanka</title>
+    <meta name="description"
+          content="Discover Sri Lanka's best destinations, beaches, wildlife, culture and travel itineraries. Plan your unforgettable island adventure.">
+
+    <title>Explore Sri Lanka | Your Travel Guide</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- NAVIGATION -->
     <header class="header">
         <nav class="navbar">
-
-            <!-- Website Logo -->
             <a href="index.html" class="logo">
                 🇱🇰 Explore <span>Sri Lanka</span>
             </a>
 
-            <!-- Navigation Links -->
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="pages/about.html">About</a></li>
@@ -29,58 +34,460 @@
                 <li><a href="pages/culture.html">Culture</a></li>
                 <li><a href="pages/food.html">Food</a></li>
                 <li><a href="pages/gallery.html">Gallery</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="#travel-guide">Travel Guide</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Mobile Menu Button -->
             <button class="menu-toggle" id="menuToggle"
                     aria-label="Open navigation menu"
                     aria-expanded="false">
                 &#9776;
             </button>
-
         </nav>
     </header>
 
-    
-<main>
-    <!-- Home Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
+    <main>
 
-        <div class="hero-content">
-            <p class="hero-subtitle">
-                AYUBOWAN • WELCOME TO SRI LANKA
-            </p>
+        <!-- HERO -->
+        <section class="hero home-hero" id="home">
+            <div class="hero-overlay"></div>
 
-            <h1>
-                Discover the Beauty of
-                <span>Sri Lanka</span>
-            </h1>
+            <div class="hero-content">
+                <p class="hero-subtitle">
+                    AYUBOWAN • WELCOME TO PARADISE
+                </p>
 
-            <p class="hero-description">
-                Explore breathtaking landscapes,
-                golden beaches, ancient heritage,
-                rich culture and unforgettable adventures
-                in the Pearl of the Indian Ocean.
-            </p>
+                <h1>
+                    Your Journey Begins in
+                    <span>Sri Lanka</span>
+                </h1>
 
-            <div class="hero-buttons">
+                <p class="hero-description">
+                    From golden beaches and misty mountains
+                    to ancient cities and thrilling wildlife
+                    safaris, discover the wonders of the
+                    Pearl of the Indian Ocean.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="pages/destinations.html"
+                       class="btn btn-primary">
+                        Explore Destinations →
+                    </a>
+
+                    <a href="#itineraries"
+                       class="btn btn-outline">
+                        Plan Your Trip
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESTINATION SEARCH -->
+        <section class="home-search-section">
+            <div class="home-search-box">
+                <div>
+                    <span class="eyebrow">START EXPLORING</span>
+                    <h2>Where would you like to go?</h2>
+                    <p>Find your perfect destination in Sri Lanka.</p>
+                </div>
+
+                <form id="homeSearchForm" class="home-search-form">
+                    <label for="homeSearch" class="visually-hidden">
+                        Search destinations
+                    </label>
+
+                    <input type="search"
+                           id="homeSearch"
+                           placeholder="Try Ella, Sigiriya, Mirissa..."
+                           required>
+
+                    <button type="submit">Search →</button>
+                </form>
+
+                <p id="searchFeedback"
+                   class="search-feedback"
+                   aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="home-section welcome-section">
+            <div class="section-intro">
+                <span class="eyebrow">THE PEARL OF THE INDIAN OCEAN</span>
+                <h2>One Island. Endless Experiences.</h2>
+                <p>
+                    Sri Lanka is a tropical island filled with
+                    extraordinary experiences. Discover ancient
+                    heritage, scenic train journeys, tropical
+                    beaches, wildlife adventures and unforgettable
+                    local hospitality.
+                </p>
+            </div>
+
+            <div class="experience-highlights">
+                <div>
+                    <span>🏖️</span>
+                    <h3>Golden Beaches</h3>
+                    <p>Relax beside beautiful tropical coastlines.</p>
+                </div>
+
+                <div>
+                    <span>🐘</span>
+                    <h3>Wildlife Safaris</h3>
+                    <p>Explore national parks and natural habitats.</p>
+                </div>
+
+                <div>
+                    <span>🏛️</span>
+                    <h3>Ancient Heritage</h3>
+                    <p>Discover centuries of history and culture.</p>
+                </div>
+
+                <div>
+                    <span>🌿</span>
+                    <h3>Hill Country</h3>
+                    <p>Experience tea estates and misty mountains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- POPULAR DESTINATIONS -->
+        <section class="home-section destinations-home"
+                 id="popular-destinations">
+
+            <div class="section-heading-home">
+                <div>
+                    <span class="eyebrow">PLACES TO DISCOVER</span>
+                    <h2>Popular Destinations</h2>
+                    <p>
+                        Start your journey with some of Sri Lanka's
+                        most memorable places.
+                    </p>
+                </div>
+
                 <a href="pages/destinations.html"
-                   class="btn btn-primary">
-                    Explore Destinations
-                </a>
-
-                <a href="pages/about.html"
-                   class="btn btn-outline">
-                    Discover More
+                   class="text-link">
+                    View All Destinations →
                 </a>
             </div>
+
+            <div class="destination-grid">
+
+                <article class="destination-card">
+                    <div class="destination-image">
+                        <img src="assets/images/apura-1.webp"
+                             alt="Ancient heritage in Sri Lanka"
+                             loading="lazy">
+                        <span class="card-tag">Heritage</span>
+                    </div>
+                    <div class="destination-info">
+                        <h3>Anuradhapura</h3>
+                        <p>
+                            Explore sacred monuments, ancient
+                            architecture and historic sites.
+                        </p>
+                        <a href="pages/destinations.html">
+                            Discover More →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="destination-image">
+                        <img src="assets/images/Dalada-Maligava-tooth-Buddha-Sri-Lanka-Kandy.webp"
+                             alt="Temple of the Sacred Tooth Relic in Kandy"
+                             loading="lazy">
+                        <span class="card-tag">Culture</span>
+                    </div>
+                    <div class="destination-info">
+                        <h3>Kandy</h3>
+                        <p>
+                            Experience cultural heritage, scenic
+                            landscapes and the famous Temple
+                            of the Tooth.
+                        </p>
+                        <a href="pages/destinations.html">
+                            Discover More →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="destination-card">
+                    <div class="destination-image">
+                        <img src="assets/images/hero.jpg"
+                             alt="Scenic landscape in Sri Lanka"
+                             loading="lazy">
+                        <span class="card-tag">Nature</span>
+                    </div>
+                    <div class="destination-info">
+                        <h3>Explore the Highlands</h3>
+                        <p>
+                            Enjoy scenic mountain landscapes,
+                            cool weather and beautiful viewpoints.
+                        </p>
+                        <a href="pages/destinations.html">
+                            Discover More →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- TRAVEL EXPERIENCES -->
+        <section class="home-section experiences-section"
+                 id="experiences">
+
+            <div class="section-intro">
+                <span class="eyebrow">FIND YOUR ADVENTURE</span>
+                <h2>How Do You Want to Explore?</h2>
+                <p>
+                    Choose the experiences that make your
+                    Sri Lankan holiday unforgettable.
+                </p>
+            </div>
+
+            <div class="experience-grid">
+
+                <a href="pages/destinations.html"
+                   class="experience-card">
+                    <span class="experience-icon">🌊</span>
+                    <h3>Beaches & Surfing</h3>
+                    <p>
+                        Discover tropical beaches, coastal towns
+                        and exciting water activities.
+                    </p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="pages/destinations.html"
+                   class="experience-card">
+                    <span class="experience-icon">🐆</span>
+                    <h3>Wildlife & Safari</h3>
+                    <p>
+                        Visit national parks and experience
+                        Sri Lanka's remarkable wildlife.
+                    </p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="pages/history.html"
+                   class="experience-card">
+                    <span class="experience-icon">🏯</span>
+                    <h3>History & Heritage</h3>
+                    <p>
+                        Discover ancient kingdoms, temples
+                        and UNESCO heritage sites.
+                    </p>
+                    <span>Explore →</span>
+                </a>
+
+                <a href="pages/culture.html"
+                   class="experience-card">
+                    <span class="experience-icon">🥁</span>
+                    <h3>Culture & Festivals</h3>
+                    <p>
+                        Learn about local traditions,
+                        celebrations and cultural experiences.
+                    </p>
+                    <span>Explore →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- SAMPLE ITINERARIES -->
+        <section class="home-section itineraries-section"
+                 id="itineraries">
+
+            <div class="section-intro">
+                <span class="eyebrow">TRAVEL INSPIRATION</span>
+                <h2>Plan Your Sri Lanka Adventure</h2>
+                <p>
+                    Not sure where to start? Explore these
+                    sample travel routes.
+                </p>
+            </div>
+
+            <div class="itinerary-grid">
+
+                <article class="itinerary-card">
+                    <div class="itinerary-top">
+                        <span>5 DAYS</span>
+                        <h3>Culture & Hill Country</h3>
+                    </div>
+
+                    <div class="itinerary-body">
+                        <p>
+                            A short journey combining historic
+                            landmarks and mountain scenery.
+                        </p>
+
+                        <ol>
+                            <li>Day 1 — Sigiriya</li>
+                            <li>Day 2 — Dambulla & Kandy</li>
+                            <li>Day 3 — Kandy</li>
+                            <li>Day 4 — Nuwara Eliya</li>
+                            <li>Day 5 — Ella</li>
+                        </ol>
+
+                        <a href="pages/destinations.html">
+                            Explore This Route →
+                        </a>
+                    </div>
+                </article>
+
+                <article class="itinerary-card">
+                    <div class="itinerary-top">
+                        <span>7 DAYS</span>
+                        <h3>Nature, Safari & Beaches</h3>
+                    </div>
+
+                    <div class="itinerary-body">
+                        <p>
+                            A scenic journey through the
+                            highlands, wildlife areas and coast.
+                        </p>
+
+                        <ol>
+                            <li>Day 1 — Kandy</li>
+                            <li>Day 2 — Nuwara Eliya</li>
+                            <li>Day 3 — Ella</li>
+                            <li>Day 4 — Ella</li>
+                            <li>Day 5 — Yala area</li>
+                            <li>Day 6 — Mirissa</li>
+                            <li>Day 7 — Galle</li>
+                        </ol>
+
+                        <a href="pages/destinations.html">
+                            Explore This Route →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="itinerary-note">
+                These are sample routes for inspiration.
+                Allow extra time for transfers and adjust
+                according to your interests and travel season.
+            </p>
+        </section>
+
+        <!-- TRAVEL GUIDE -->
+        <section class="home-section travel-guide-section"
+                 id="travel-guide">
+
+            <div class="section-intro">
+                <span class="eyebrow">BEFORE YOU TRAVEL</span>
+                <h2>Essential Travel Information</h2>
+                <p>
+                    Helpful things to know before exploring Sri Lanka.
+                </p>
+            </div>
+
+            <div class="travel-guide-grid">
+
+                <article class="guide-card">
+                    <span>☀️</span>
+                    <h3>Best Time to Visit</h3>
+                    <p>
+                        Weather varies across the island.
+                        The southwest and northeast coasts
+                        have different seasonal patterns.
+                    </p>
+                </article>
+
+                <article class="guide-card">
+                    <span>🚆</span>
+                    <h3>Getting Around</h3>
+                    <p>
+                        Travel by train, bus, taxi or
+                        private vehicle. Plan extra time
+                        for longer journeys.
+                    </p>
+                </article>
+
+                <article class="guide-card">
+                    <span>💰</span>
+                    <h3>Currency</h3>
+                    <p>
+                        The local currency is the
+                        Sri Lankan Rupee (LKR).
+                        Carry cash for smaller purchases.
+                    </p>
+                </article>
+
+                <article class="guide-card">
+                    <span>🛂</span>
+                    <h3>Visa & Entry</h3>
+                    <p>
+                        Entry requirements depend on
+                        nationality and may change.
+                        Check official information
+                        before travelling.
+                    </p>
+                    <a href="https://www.eta.gov.lk/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Official ETA Website ↗
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="home-cta" id="contact">
+            <div>
+                <span class="eyebrow">READY TO EXPLORE?</span>
+                <h2>Your Sri Lankan Adventure Awaits</h2>
+                <p>
+                    Discover inspiring destinations,
+                    unique experiences and beautiful
+                    places across the island.
+                </p>
+
+                <a href="pages/destinations.html"
+                   class="btn btn-primary">
+                    Start Exploring →
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+        <div class="footer-inner">
+            <div>
+                <h3>🇱🇰 Explore Sri Lanka</h3>
+                <p>
+                    Your guide to discovering the beauty,
+                    culture and adventures of Sri Lanka.
+                </p>
+            </div>
+
+            <div>
+                <h4>Explore</h4>
+                <a href="pages/about.html">About Sri Lanka</a>
+                <a href="pages/destinations.html">Destinations</a>
+                <a href="pages/gallery.html">Gallery</a>
+            </div>
+
+            <div>
+                <h4>Discover</h4>
+                <a href="pages/history.html">History</a>
+                <a href="pages/culture.html">Culture</a>
+                <a href="pages/food.html">Sri Lankan Food</a>
+            </div>
         </div>
-    </section>
-</main>
 
+        <div class="footer-bottom">
+            © 2026 Explore Sri Lanka. All rights reserved.
+        </div>
+    </footer>
 
-    <script src="js/main.js"></script>
 </body>
 </html>

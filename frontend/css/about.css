@@ -1,50 +1,97 @@
 
-/* ABOUT PAGE */
+/* ==========================================
+   EXPLORE SRI LANKA - ABOUT PAGE
+   GREEN AND GOLD THEME
+========================================== */
+
+:root {
+    --forest: #12372d;
+    --green: #13765b;
+    --gold: #f4c95d;
+    --light: #f5f7f5;
+    --text: #555;
+    --border: #dce8df;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   1. HERO
+========================================== */
 
 .about-hero {
     min-height: 450px;
+    padding: 100px 8%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 20px;
 
     background:
-        linear-gradient(rgba(0, 35, 25, 0.75),
-                        rgba(0, 35, 25, 0.65)),
-        url("../assets/images/hero.jpg")
-        center/cover no-repeat;
+        linear-gradient(
+            rgba(0, 35, 25, 0.75),
+            rgba(0, 35, 25, 0.65)
+        ),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS1T64itIgU7hA089i3idwz6i740Nprfm9QBrssDQ7-Q&s=10")
+        center / cover no-repeat;
 }
 
 .about-hero-content {
-    max-width: 800px;
+    max-width: 850px;
     color: white;
 }
 
 .about-subtitle {
-    color: #f4c95d;
-    letter-spacing: 3px;
+    color: var(--gold);
     font-size: 13px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
 }
 
 .about-hero h1 {
+    color: white;
     font-size: clamp(42px, 6vw, 70px);
     margin-bottom: 20px;
 }
 
 .about-hero h1 span {
-    color: #f4c95d;
+    color: var(--gold);
 }
 
-.about-hero-content > p:last-child {
-    font-size: 17px;
-    line-height: 1.8;
+.about-hero-content > p {
+    line-height: 1.9;
 }
+
+.about-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: var(--gold);
+    color: var(--forest);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.about-button:hover {
+    background: #ffdb7c;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   2. INTRODUCTION
+========================================== */
 
 .about-intro {
-    padding: 100px 8%;
+    padding: 90px 8%;
     background: white;
 }
 
@@ -61,44 +108,54 @@
     width: 100%;
     height: 450px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
 .section-label {
-    color: #13765b;
-    font-weight: bold;
+    color: var(--green);
     font-size: 12px;
+    font-weight: 800;
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
 .intro-text h2,
 .section-heading h2 {
-    font-size: 40px;
-    color: #12372d;
+    color: var(--forest);
+    font-size: clamp(30px, 4vw, 42px);
     margin-bottom: 25px;
 }
 
 .intro-text h2 span,
 .section-heading h2 span {
-    color: #13765b;
+    color: var(--green);
 }
 
 .intro-text p {
-    line-height: 1.9;
-    color: #555;
+    color: var(--text);
+    line-height: 1.95;
     margin-bottom: 18px;
 }
 
-/* Quick Facts */
+/* ==========================================
+   3. QUICK FACTS
+========================================== */
+
 .quick-facts {
-    padding: 90px 8%;
-    background: #f5f7f5;
+    padding: 85px 8%;
+    background: var(--light);
 }
 
 .section-heading {
     text-align: center;
     margin-bottom: 45px;
+}
+
+.section-description {
+    max-width: 750px;
+    margin: auto;
+    color: var(--text);
+    line-height: 1.8;
 }
 
 .facts-container {
@@ -110,72 +167,380 @@
 }
 
 .fact-card {
-    background: white;
     padding: 35px 20px;
-    border-radius: 10px;
+    background: white;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
-}
-
-.fact-card:hover {
-    transform: translateY(-7px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .fact-card h3 {
-    color: #12372d;
+    color: var(--forest);
     margin-bottom: 12px;
 }
 
 .fact-card p {
-    color: #666;
+    color: var(--text);
 }
 
-/* Natural Beauty */
-.natural-beauty {
+/* ==========================================
+   4. TOPIC BROWSER
+========================================== */
+
+.explore-section {
     padding: 90px 8%;
     background: white;
 }
 
-.beauty-container {
+.topic-root {
     max-width: 1150px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 18px;
 }
 
-.beauty-card {
-    background: #f5f7f5;
-    padding: 40px 25px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s;
+/* ==========================================
+   5. SEARCH
+========================================== */
+
+.about-search {
+    max-width: 1150px;
+    margin: 0 auto 35px;
 }
 
-.beauty-card:hover {
-    transform: translateY(-7px);
+.about-search label {
+    display: block;
+    color: var(--forest);
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
-.beauty-icon {
-    font-size: 45px;
-    margin-bottom: 20px;
+.search-controls {
+    display: flex;
+    gap: 12px;
 }
 
-.beauty-card h3 {
-    color: #12372d;
+.search-controls input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font: inherit;
+}
+
+.search-controls input:focus {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+.search-controls button {
+    padding: 14px 22px;
+    background: var(--forest);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   6. MAIN CATEGORY DROPDOWN
+========================================== */
+
+.accordion {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.accordion > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: var(--forest);
+    font-weight: 800;
+}
+
+.accordion > summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion > summary::after {
+    content: "+";
+    color: var(--green);
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.accordion[open] > summary::after {
+    content: "−";
+}
+
+.accordion-level-1 {
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-level-1 > summary {
+    background: #edf5ef;
+    padding: 25px 28px;
+    font-size: 20px;
+}
+
+.accordion-level-1[open] > summary {
+    border-bottom: 1px solid var(--border);
+}
+
+.accordion-body {
+    padding: 24px;
+}
+
+/* ==========================================
+   7. SUBCATEGORY / PROVINCE DROPDOWN
+========================================== */
+
+.accordion-level-2 {
+    margin-bottom: 14px;
+    background: #fafcfb;
+}
+
+.accordion-level-2 > summary {
+    padding: 20px;
+    font-size: 17px;
+}
+
+.accordion-level-2[open] > summary {
+    background: #e8f3ec;
+}
+
+.accordion-level-2 > .accordion-body {
+    padding: 18px;
+}
+
+/* ==========================================
+   8. DISTRICT DROPDOWN
+========================================== */
+
+.accordion-level-3 {
+    margin-bottom: 12px;
+    background: white;
+}
+
+.accordion-level-3 > summary {
+    padding: 17px 20px;
+    font-size: 16px;
+}
+
+.accordion-level-3[open] > summary {
+    background: #f0f7f2;
+}
+
+.accordion-level-3 > .accordion-body {
+    padding: 20px;
+}
+
+/* ==========================================
+   9. DETAIL CONTENT
+========================================== */
+
+.detail-panel {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 25px;
+}
+
+.detail-panel h4 {
+    color: var(--forest);
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.detail-panel p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.95;
     margin-bottom: 15px;
 }
 
-.beauty-card p {
-    color: #666;
-    line-height: 1.7;
+.detail-photo img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* Footer */
+.image-missing {
+    min-height: 250px;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #527563;
+    background: #e6f0e8;
+    border-radius: 12px;
+}
+
+/* ==========================================
+   10. DISTRICT INFORMATION SECTIONS
+========================================== */
+
+.district-section {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.district-section:last-child {
+    border-bottom: none;
+}
+
+.district-section h4 {
+    color: var(--forest);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.district-section p {
+    color: var(--text);
+    line-height: 1.95;
+    margin-bottom: 14px;
+}
+
+.district-section img {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 18px 0;
+}
+
+.district-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.district-tags span {
+    background: #e5f2e9;
+    color: var(--green);
+    border-radius: 25px;
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   11. MAP
+========================================== */
+
+.map-block {
+    padding: 20px;
+    margin-bottom: 25px;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.map-block p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.map-block iframe {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   12. PRESIDENT CARDS
+========================================== */
+
+.president-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.president-card {
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.president-card h4 {
+    color: var(--forest);
+    margin-bottom: 10px;
+}
+
+.president-card p {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+/* ==========================================
+   13. NOTES AND EMPTY RESULTS
+========================================== */
+
+.content-note {
+    max-width: 1100px;
+    margin: 30px auto 0;
+    color: #66746c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.empty-results {
+    padding: 35px;
+    text-align: center;
+    color: var(--text);
+}
+
+/* ==========================================
+   14. VISIT SECTION
+========================================== */
+
+.about-visit-section {
+    padding: 90px 8%;
+    background: var(--forest);
+    text-align: center;
+    color: white;
+}
+
+.about-visit-section .section-label {
+    color: var(--gold);
+}
+
+.about-visit-section h2 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.about-visit-section h2 span {
+    color: var(--gold);
+}
+
+.about-visit-section > p {
+    line-height: 1.8;
+}
+
+/* ==========================================
+   15. FOOTER
+========================================== */
+
 .about-footer {
-    background: #12372d;
     padding: 25px;
+    background: #0b261e;
     text-align: center;
 }
 
@@ -184,23 +549,73 @@
     font-size: 13px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .intro-container {
+/* ==========================================
+   16. TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .intro-container,
+    .detail-panel {
         grid-template-columns: 1fr;
     }
 
-    .facts-container,
-    .beauty-container {
+    .facts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .president-grid {
         grid-template-columns: 1fr;
     }
 
-    .intro-text h2,
-    .section-heading h2 {
+    .intro-image img {
+        height: 350px;
+    }
+}
+
+/* ==========================================
+   17. MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .about-intro,
+    .quick-facts,
+    .explore-section {
+        padding: 65px 6%;
+    }
+
+    .facts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion-level-1 > summary {
+        padding: 20px 16px;
+        font-size: 17px;
+    }
+
+    .accordion-body {
+        padding: 15px;
+    }
+
+    .accordion-level-2 > summary,
+    .accordion-level-3 > summary {
+        padding: 16px;
+    }
+
+    .detail-photo img {
+        height: 220px;
+    }
+
+    .map-block iframe {
+        height: 260px;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+
+    .about-visit-section h2 {
         font-size: 30px;
-    }
-
-    .about-intro {
-        padding: 60px 6%;
     }
 }

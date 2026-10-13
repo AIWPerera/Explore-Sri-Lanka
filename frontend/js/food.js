@@ -1,5 +1,11 @@
 
+/* ==========================================
+   EXPLORE SRI LANKA - FOOD GUIDE
+   Original Food Images + Search + Filters
+========================================== */
+
 const foods = [
+
     // RICE & CURRY
     {
         name: "Rice & Curry",
@@ -223,11 +229,18 @@ const foods = [
     }
 ];
 
+/* ==========================================
+   ELEMENTS
+========================================== */
+
 const foodGrid = document.getElementById("foodGrid");
 const foodSearch = document.getElementById("foodSearch");
-const filterButtons = document.querySelectorAll(".filter-btn");
+const foodCategory = document.getElementById("foodCategory");
+const foodReset = document.getElementById("foodReset");
 const foodCount = document.getElementById("foodCount");
 const foodEmpty = document.getElementById("foodEmpty");
+
+/* CATEGORY NAMES */
 
 const categoryNames = {
     rice: "Rice & Curry",
@@ -238,40 +251,69 @@ const categoryNames = {
     drinks: "Drinks & Snacks"
 };
 
-let selectedCategory = "all";
+/* POPULATE CATEGORY DROPDOWN */
+
+Object.entries(categoryNames).forEach(([value, label]) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = label;
+    foodCategory.appendChild(option);
+});
+
+/* RENDER FOOD CARDS */
 
 function renderFoods() {
-    const searchText = foodSearch.value.trim().toLowerCase();
 
-    const filteredFoods = foods.filter(food => {
+    const keyword = foodSearch.value.trim().toLowerCase();
+    const selectedCategory = foodCategory.value;
+
+    const filtered = foods.filter(food => {
+
+        const searchable = [
+            food.name,
+            food.description,
+            categoryNames[food.category]
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = searchable.includes(keyword);
+
         const matchesCategory =
             selectedCategory === "all" ||
             food.category === selectedCategory;
 
-        const matchesSearch =
-            food.name.toLowerCase().includes(searchText) ||
-            food.description.toLowerCase().includes(searchText);
-
-        return matchesCategory && matchesSearch;
+        return matchesSearch && matchesCategory;
     });
 
     foodGrid.innerHTML = "";
 
-    filteredFoods.forEach(food => {
+    filtered.forEach(food => {
+
         const card = document.createElement("article");
         card.className = "food-card";
+
+        const photo = document.createElement("div");
+        photo.className = "food-photo";
 
         const image = document.createElement("img");
         image.src = food.image;
         image.alt = food.name;
         image.loading = "lazy";
 
+        image.onerror = function () {
+            photo.replaceChildren(
+                document.createTextNode("🍛 " + food.name)
+            );
+        };
+
+        photo.appendChild(image);
+
         const content = document.createElement("div");
-        content.className = "food-card-content";
+        content.className = "food-content";
 
         const category = document.createElement("span");
-        category.className = "food-card-category";
-        category.textContent = categoryNames[food.category];
+        category.className = "food-badge";
+        category.textContent =
+            categoryNames[food.category] || food.category;
 
         const title = document.createElement("h3");
         title.textContent = food.name;
@@ -280,30 +322,34 @@ function renderFoods() {
         description.textContent = food.description;
 
         content.append(category, title, description);
-        card.append(image, content);
+
+        card.append(photo, content);
+
         foodGrid.appendChild(card);
     });
 
     foodCount.textContent =
-        "Showing " + filteredFoods.length + " of " +
-        foods.length + " foods";
+        `Showing ${filtered.length} of ${foods.length} foods`;
 
-    foodEmpty.hidden = filteredFoods.length !== 0;
+    foodEmpty.hidden = filtered.length !== 0;
 }
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        selectedCategory = button.dataset.category;
-
-        filterButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-        renderFoods();
-    });
-});
+/* SEARCH */
 
 foodSearch.addEventListener("input", renderFoods);
+
+/* CATEGORY FILTER */
+
+foodCategory.addEventListener("change", renderFoods);
+
+/* RESET FILTERS */
+
+foodReset.addEventListener("click", function () {
+    foodSearch.value = "";
+    foodCategory.value = "all";
+    renderFoods();
+});
+
+/* INITIAL DISPLAY */
 
 renderFoods();
